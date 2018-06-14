@@ -25,12 +25,16 @@ function exist(i, j) {
 }
 
 function empty(i, j) {
-	if (taquin [i][j]) === "" {
+	if ((taquin [i][j]) === "") {
 		return true;
 	}
 	else {
 		return false;
 	}
+}
+
+function permute(i, j) {
+	
 }
 
 
