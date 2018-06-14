@@ -15,7 +15,23 @@ function draw() {
 	
 }
 
+function exist(i, j) {
+	if (i >=0 && i <=3 && j >=0 && j <=3 ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
+function empty(i, j) {
+	if (taquin [i][j]) === "" {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
 
 $(document).ready(function() {
