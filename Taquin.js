@@ -3,8 +3,9 @@ taquin [0] = new Array ("1", "2", "3", "4");
 taquin [1] = new Array ("5", "6", "7", "8");
 taquin [2] = new Array ("9", "10", "11", "12");
 taquin [3] = new Array ("13", "14", "15", " ");
-var iVide = ;
-var jVide = ;
+var iVide = 3;
+var jVide = 3;
+
 
 function draw() {
 	for (i = 0; i <= 3; i ++) {
@@ -16,7 +17,7 @@ function draw() {
 	$("button").click(function(){
 		var i = parseInt($(this).attr("i"));
 		var j = parseInt($(this).attr("j"));
-		console.log(permutable(i,j));
+		permute(i,j);
 	});
 }
 
@@ -51,8 +52,17 @@ function permutable(i, j) {
 }
 
 function permute(i, j) {
-	
+	if (permutable(i, j)) {
+		taquin[iVide][jVide] = taquin[i][j];
+		taquin[i][j] = " ";
+		iVide = i;
+		jVide = j;
+		draw();
+
+	}
 }
+
+
 
 
 $(document).ready(function() {
